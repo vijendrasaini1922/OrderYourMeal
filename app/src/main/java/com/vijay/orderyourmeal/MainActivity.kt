@@ -14,11 +14,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        list.add(Meal(R.drawable.hamburger, "Hamburger-Fries"))
-        list.add(Meal(R.drawable.scrumptious, "Scrumptious-Brunch-Setting"))
-        list.add(Meal(R.drawable.pepperonipizza , "Delicious-Plate-Of-Pepperoni-Pizza"))
-        list.add(Meal(R.drawable.cocktails , "two-red-cocktails"))
-        list.add(Meal(R.drawable.pastapizza , "shellfish-pasta-pizza-and-italian-food"))
+        list.add(Meal(R.drawable.hamburger, "Hamburger-Fries", 100))
+        list.add(Meal(R.drawable.scrumptious, "Scrumptious-Brunch-Setting", 150))
+        list.add(Meal(R.drawable.pepperonipizza , "Delicious-Plate-Of-Pepperoni-Pizza", 180))
+        list.add(Meal(R.drawable.cocktails , "two-red-cocktails", 140))
+        list.add(Meal(R.drawable.pastapizza , "shellfish-pasta-pizza-and-italian-food", 120))
 
         rv.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         val mealAdapter = MealAdapter(this, list)

@@ -16,8 +16,9 @@ class MealAdapter(var ctx: Context, var list: MutableList<Meal>):
     lateinit var mealHolder: MealHolder
 
     class MealHolder(view: View): RecyclerView.ViewHolder(view){
-        var tv:TextView = view.meal_names
+        var tvMealName:TextView? = view.meal_names
         var iv:ImageView = view.meal_images
+        var tvMealPrice: TextView? = view.meal_price
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MealHolder {
@@ -27,8 +28,9 @@ class MealAdapter(var ctx: Context, var list: MutableList<Meal>):
     }
 
     override fun onBindViewHolder(holder: MealHolder, position: Int) {
-        mealHolder.tv.text = list[position].m_names
+        mealHolder.tvMealName?.text = list[position].m_names
         mealHolder.iv.setImageResource(list[position].m_images)
+        mealHolder.tvMealPrice?.text = list[position].m_price.toString()
     }
 
     override fun getItemCount(): Int {

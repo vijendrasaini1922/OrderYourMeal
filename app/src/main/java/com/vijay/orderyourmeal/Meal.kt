@@ -1,3 +1,5 @@
 package com.vijay.orderyourmeal
 
-class Meal(var m_images: Int, var m_names: String)
+import android.widget.Button
+
+class Meal(var m_images: Int, var m_names: String, var m_price: Int)
